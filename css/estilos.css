@@ -1,0 +1,545 @@
+/*
+reglas CSS:
+1.- primero de definen los estilos para las ETIQUETAS HTML, TALES COMO
+HEADER, FOOTER, DIV, A, P...
+
+2.-Luego pasamos a definir los estilos para IDENTIFICADORE(Id), los Id son
+elementos únicos en el HTML, los id en el css se declaran con el simbolo #:
+por ejemplo: #nombre-id{estilos};
+y en el HTML se declaran <DIV id='idDiv'></DIV>
+
+3.-AL final se definen los estilos para las clases(class), las clases son
+elementos que se pueden repetien N veces en el HTML, pero en el CSS
+se declaran con el simbolo . ejemplo: .nombre-clase{estilos};
+y en el HTML se definen mediante el atributo class, ejemplo:
+<DIV class='claseDi'></DIV>;
+
+Los ID una vez, las class N veces
+
+4.- Todos los estilos se ordenan segun se han declarado en la plantilla
+HTML, teniendo en cuenta la prioridad anterior, es decir, primero etiquetas HTML,
+luego Id y finalmente class.
+
+ejemplo:
+BODY
+HEADER
+H1...
+#Is's
+.Class;
+
+5.- Los atributos se declaran de la siguiente forma:
+{atributo1:valor1; atributo2:valor2;...};
+
+6.-Todos los atributos se ordenan alfabeticamente, por ejemplo:
+si tengo width, color, display...entonces el orden de declaracion seria:
+color, display, width;
+
+7.- Si tenemos estilos para las etiquetas HTML y/o BODY estos estilos son
+los primeros en definirse. Si tenemos estilos parael comodin *, o para las 
+etiquets HTML y/o BODY, estos son los primeros en definirse.
+
+8.- En el body debemos declarar un tamaño de fuente global. 
+
+9.-Si tenemos estilos para resetear elementos HTML, estos iran los primeros
+dentro de la hoja de estilos.
+
+*/
+
+
+/*VAMOS A LLEVAR A CABO UN Reseteo universal*/
+*{
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+article,figcaption,figure,footer, header, hgroup,nav,section{
+	display:block;/*todas las estructuras que trabajamos con semantica diremos que su naturaleza sea en BLOQUE*/
+}
+
+/*Fin de reseteo uiversal*/
+
+
+/*Estilos del sitio*/
+/* indica que se Asigna a todos los elementos por defecto*/
+
+@font-face {
+    font-family: 'Chalet';
+    src: url('../fonts/Chalet.eot');
+    src: url('../fonts/Chalet.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Chalet.woff') format('woff'),
+         url('../fonts/Chalet.ttf') format('truetype'),
+         url('../fonts/Chalet.svg#Chalet') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Pecita';
+    src: url('../fonts/Pecita.eot');
+    src: url('../fonts/Pecita.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Pecita.woff') format('woff'),
+         url('../fonts/Pecita.ttf') format('truetype'),
+         url('../fonts/Pecita.svg#Pecita') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body{
+	background:#212121 url(../img/fondo.jpg) ;
+	color:#FFF;
+	font-family: "Chalet", Helvetica, Verdana;
+	font-size: 1em;
+}
+/* 16px = 12pt = 100% = 1em*/
+a{
+	color:#C90269;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a:hover{
+	color:#027FC2;
+}
+
+audio, iframe, img, video{
+	max-width:100%;
+}/*Para lograr FLEXIBILIDAD en IMAGENES y VIDEO, tendremos que 
+poner el atributo 'max-width' al 100%, para diseños webs sensibles.*/
+
+fieldset{
+	border: .1em solid #FFF;/*#F60 ;Color naranja=#F60*/
+	border-radius: .5em;
+	padding: 1em;
+}
+
+figcaption{
+	font-size: 0.85em;
+	padding:0.25em;
+	text-align: center;
+}/*La etiqueta <figcaption> es únicamente para enmarcar un titular dentro de la etiqueta <figure>.*/
+
+form{
+
+	width: 100%;
+}
+
+form div{
+	margin: .5em;
+}
+
+
+h1,h2,h3{
+	color: #FFF;/*#F90;*/
+	font-family: "Pecita", Helvetica, Verdana;
+	vertical-align: right;
+}
+
+h3{
+	background: #007bc2;/*#e2e7f1;*/
+	border-radius: 1em;
+	box-shadow: 0.25em .25em .25em rgba(243,246,247,.5);
+	margin-bottom: 0.5em;
+	padding-left: 0.5em;
+}
+
+iframe{
+	border-radius: .5em;
+}
+
+input[type="email"], input[type="text"], textarea{
+	background: #EEE;
+	border-radius: 0.25em;/*punta sup. derecha e inferios izd*/
+	color: #F60;
+	font-size: 1em;
+	padding: 0.25em;
+	width: 95%;
+
+}
+
+input[type="email"]:focus, input[type="text"]:focus, textarea:focus{
+	background: #c6ecf9;
+}/*Cuando cq de estos elementos recibe el foco...el color gris del input o textarea
+pasara a tener color azul claro*/
+
+input[type="submit"]{
+	background: #FFF;/*#F90;*/
+	border-radius: 0 .25em;/*Cuando el border radius se trabaja por pares, se indica
+	en este .25(para la punta sup. derecha e inferior izqd) y 0(para los otros dos vertices del botón)*/
+	color: #500;
+	font-family: "Chalet";
+	font-size: 1.25em;
+	padding: .25em;
+	text-align: right;
+}
+
+input[type="submit"]:hover{
+	background: #7BBFD5;
+	border-radius: .25em 0;
+	color: #000;
+	cursor:pointer;
+}
+
+label{
+	cursor: pointer;
+}
+
+legend{
+	color: #FFF;/*#F90;*/
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+hr{
+	border: 1px dashed #FFF;
+	margin:1em 0;/*1em ARR/AB y 0px a ambos lados*/
+}
+
+ol{
+	padding: 0 2em;
+}
+
+ol li{
+	padding: 1em 0;
+}
+
+textarea{
+	resize: none;
+}
+
+
+header, section#contenido, footer{
+	background: #FFF url(../img/fondo-interno.jpg);
+	margin: 0 auto;
+	max-width: 90%;
+	text-align: center;
+
+}
+
+header h1, nav, footer nav {
+	display: inline-block;
+	max-width: 100%;/*del objeto padre en el que se encuentra, en este caso es el header*/
+	vertical-align: middle;/*en vez de top, esta vez middle para que no se vean tan separados*/
+}
+
+nav ul{
+	list-style: none;
+}
+
+nav li{
+	display: inline-block;
+	padding: 0.1em;
+	vertical-align: top;
+}
+
+/*estilos para los enlaces que estan dentro del NAV*/
+nav a{
+	background: #C90269;
+	border: 0.1em solid #027FC2;
+	border-radius: 0.25em;/*redondeamos el border 0.25em*/
+	color:#000;
+	display: block;
+	font-family: "Pecita", Helvetica, Verdana;
+	font-size: 1.4em;
+	padding: 0.2em;
+	/*
+	TRANSITION:;
+	all= todas las propiedades que pueden tener transicion,
+	duracion, en segundos
+	tipo de efecto a aplicar,(easi in, regular, easi out)
+	*/
+	-ms-transition:all 0.5s ease-in;/*ease-in, aceleracion al pppio del efecto*/
+	-moz-transition:all 0.5s ease-in;
+	-o-transition:all 0.5s ease-in;
+	-webkit-transition:all 0.5s ease-in;/*para safari y chrome*/
+	transition:all 0.5s ease-in;
+}
+
+nav a:hover{
+	background: #027FC2;
+	border: 0.1em dashed #C90269;/*dashed-->Permite que la LINEA del borde sea discontinua (---)*/
+	border-radius: 0 0.5em 0 0.5em;/*borde esquina sup izq, borde esquina sup dercha, borde esq inf dercha, borde esquina inf izqd*/
+	color:#FFF;
+	-ms-transition:all 0.5s ease-out;/*ease-on, deceleracion al salir del efecto*/
+	-moz-transition:all 0.5s ease-out;
+	-o-transition:all 0.5s ease-out;
+	-webkit-transition:all 0.5s ease-out;/*para safari y chrome*/
+	transition:all 0.5s ease-out;
+}
+
+section#principal, aside{
+	background: #c90269;
+	border-radius: 0.5em;
+	display: inline-block;;
+	margin: 0 auto; /*0 arriba/abajo y auto a ambos lados*/
+	max-width: 100%;
+	padding: 0.25em;
+	vertical-align: top;
+	width: 65%;
+}
+
+article#galeria-inicio{
+	border-radius: 0.5em;
+	margin: 0.5em;
+	padding: 0.5em;
+	text-align: left;
+	width: 95%;
+}
+
+aside{
+	width: 30%;
+}
+
+aside img{
+	border-radius: 0.5em;
+}
+
+section#trabajo{
+	background: #011e30;
+	border-radius: 0.5em;
+	margin:0 auto;
+	max-width: 80%;
+	padding: 0.5em;
+	text-align:center;
+}
+
+
+section#historiaclm, section#historiacapital, section#video-capital{
+	background: #c90269;
+	border-radius: 0.5em;
+	display: inline-block;
+	font-size: 1em;
+	margin:0 auto;
+	max-width: 100%;
+	padding: 0.5em;
+	text-align: center;
+	vertical-align: top;
+	width: 95%;
+}
+
+section#historiacapital{
+	width: 60%;
+}
+
+
+section#video-capital{
+	width: 35%;
+}
+
+div.portafolio{
+	margin: 2em auto;
+}
+
+div.portafolio article{
+	display: inline;
+	padding: 1em;
+}
+
+div.portafolio figure{
+	display: inline-block;
+	padding: 1em;
+}
+
+
+section#historiaclm p, section#historiacapital p{
+	color: #000;
+	font-size: 0.8em;
+	line-height: 1.5em;
+	margin-top: 1em;
+	text-align: justify;
+	text-indent: 1em;
+}
+
+section#contacto, section#mapa{
+	background: #c90269;/*#011E30;*/
+	border-radius: .5em;
+	display: inline-block;
+	margin: 0 auto;/*0(arriba/abajo) y auto (ambos lados)*/
+	min-height:350px;
+	padding: .5em;
+	text-align: justify;
+	vertical-align: top;/*junto con display: inline-block para que ambos sections
+	compartan el mismo espacio, es decir, se coloquen en paralelo*/
+	width: 45%; /*45% de ancho para cada section, 90% conjuntamente de la 
+	disposicion total del contenedor pppal*/
+
+}
+
+article#info-contacto, article#contactanos{
+	border: .1em solid #011E30;
+	border-radius: .5em;
+	margin: .5em;/*a los 4 lados*/
+	min-height: 144px;
+	padding: .5em;
+}
+
+/*Recordemos que los elementos span se disponen en linea y
+ocupan el espacio que se requiera*/
+span.datos-contacto{
+	color: #011E30;/*#F90; */
+}
+
+section#mapa{
+	text-align: center;
+}
+
+footer{
+	color: #000;
+	font-size: 0.85em;
+	padding:0.75em 0;/*arr/abj 0.75 y 0 a ambos lados*/
+}
+
+footer nav li{
+	display: inline-block;
+	padding: 0.1em;
+	vertical-align: middle;
+}	
+
+footer nav{
+	text-align: center;
+}
+
+
+.fade{
+	-ms-transition:all 0.5s ease-in;/*ease-in, aceleracion al pppio del efecto*/
+	-moz-transition:all 0.5s ease-in;
+	-o-transition:all 0.5s ease-in;
+	-webkit-transition:all 0.5s ease-in;/*para safari y chrome*/
+	opacity: 1;/* va de 0 a 1*/
+	filter: alpha(opacity=10);/*aqui el rango es de 0 a 10*/
+	transition:all 0.5s ease-in;
+	
+}
+
+.fade:hover{
+	-ms-transition:all 0.5s ease-out;/*ease-on, deceleracion al salir del efecto*/
+	-moz-transition:all 0.5s ease-out;
+	-o-transition:all 0.5s ease-out;
+	-webkit-transition:all 0.5s ease-out;/*para safari y chrome*/
+	opacity: 0.7;/* va de 0 a 1*/
+	filter: alpha(opacity=7);/*aqui el rango es de 0 a 10*/t
+	ransition:all 0.5s ease-out;
+	
+}
+
+.redonda{
+	border-radius: 3.125em;/*La img es de 100x100 los bordes tendrian que estar a la mitad 50px, pero recordemos
+	que hay que trabajar con EM 1em=16px--> 50px/16px son */
+	box-shadow: 5px 5px 10px rgba(255,255,255,0.3);
+
+}
+
+
+/*Media querys*/
+@media screen and (min-width: 1081px){/*cuando el tam de la ventana del navegador como minimo sea 1080px aplicaran estos estilos*/
+	header h1{
+		text-align: left;
+		width: 35%;
+	}
+	nav{
+		text-align: right;
+		width: 60%;
+	}
+}
+
+@media screen and (max-width: 1080px){/*cuando el tam de la ventana del navegador como minimo sea 1080px aplicaran estos estilos*/
+	body{
+		background: #06EC2C;
+	}
+
+	nav li{
+		font-size: 1.3em;
+	}
+	article#galeria-inicio{
+		width: 90%;
+	}
+
+	aside{
+		width:20%;
+	}
+
+	section#capitales{
+		max-width: 90%;
+	}
+
+	div.portafolio article{
+		padding: .5em;
+	}
+
+	form{
+		width: 55%;
+	}
+
+	section#historiacapital, section#video-capital{
+		margin:0 0 .3em 0;/*arriba, derecha, abajo, izqda*/
+		width: 90%;
+	}
+
+}
+
+@media screen and (max-width: 800px){/*cuando el tam de la ventana del navegador como minimo sea 800px aplicaran estos estilos*/
+	body{
+		background: #E8EC06;
+	}
+
+	nav li{
+		font-size: 0.95em;
+	}
+	article#galeria-inicio{
+		width: 88%;
+	}
+
+	section#contacto, section#mapa{
+		display: block;
+		width: 95%;
+	}
+
+	section#contacto{
+		margin-bottom: .2em;
+	}
+
+	form{
+	 width: 100%;
+	}
+
+	form{
+	 width: 100%;
+	}
+}
+
+@media(max-width: 600px){/*cuando el tam de la ventana del navegador como max  600px o menor aplicaran estos estilos*/
+	body{
+		background: #EC2106;
+	}
+
+	nav li{
+		display: inline-block;
+		margin: 0px;
+		width: 98%;
+		font-size: 0.95em;
+	}
+
+	section#principal{
+		margin-bottom: 0.2em;
+	}
+
+	section#principal,aside{
+		display: block;
+		width: 95%;
+	}
+
+	#img-servicios{
+		display: none;
+	}
+
+	div.portafolio article{
+		display: block;/*cuando el tam de la ventana sea <=600px
+		se dispondran como bloques los articles, se colocarán una debajo
+		de la otra*/
+		margin:.5em auto;
+		padding: 0;
+	}
+}
+

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es"><!-- html con el atributo lang(lenguaje), si no no es HTML5-->
+<head>
+	<meta charset="UTF-8"/>
+	 <title>Castilla La Mancha...Descubre y siente!
+	 </title>
+	 
+	 <meta name="description" content="Bienvenido  al portafolio, realizado con HTML5, CSS y Jquery con
+	 Responsive Web Design;-)"/>
+	 <meta name="viewport" content="width=device-width, initial-sacale=1"/><!--Este meta name nos permite indicar que el tamaño del web se adapte al dispositivo donde se esté visualizando-->
+	<link rel="shortcut icon" href="http://www.castillalamancha.es/sites/default/files/favicon.ico" />
+	 <!--Esta etiqueta LINK, Nos permitirá colocar un 'icono de página', es una pequeña imagen asociada con una página o sitio web en particular -->
+	 <link rel="author" type="text/plain" href="humans.txt"/>
+
+
+	 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+	 <script>
+		!window.jQuery && document.write('<script src="jquery-1.4.3.min.js"><\/script>');
+	 </script>
+
+	 <link rel="stylesheet" href="css/estilos.css"/>
+	 <!--[if lt IE 9]>
+	 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	 <![endIf]--><!--Esto permitará controlar que todas las etiquetas que no interpreten navegadores antiguos, generará DIv's que permitan interpretar estas nuevas etiqoetas HTML5 -->
+
+</head>
+
+<body>
+	<header>
+	<h1>
+		<a href="index.html">
+			<img class="fade tamIco" alt="Castilla La Mancha" src="img/clm.jpg"/>
+		</a>
+	</h1>
+	<nav>
+		 <ul>
+		 		<li><a href="index.html">Inicio</a></li>
+		 		<li><a href="afondo.html">A fondo</a></li>
+		 		<li><a href="contacto.html">Contacto</a></li>
+		 </ul>
+	</nav>
+	</header>
+
+
+	<section id="contenido">
+		<section id="contacto">
+			<h2>Contáctanos</h2>
+			<article id="info-contacto">
+				<p>
+					Email:
+					<span class="datos-contacto">clmdescubrela@hotmail.com</span><br/>
+
+					Móvil:
+					<span class="datos-contacto">12345698</span><br/>
+
+					Dirección:
+					<span class="datos-contacto">Avd. Inteligente, 112</span><br/>
+
+					Social media:
+					<span class="datos-contacto">
+						<a href="http://twitter.com/@nute75" title="Twitter" target="_blank">
+						<img src="img/twitter-logo.png"/>
+						</a>
+					</span>
+				</p>
+			</article>
+			<article id="contactanos">
+				<form>
+					<fieldset>
+						<legend>Envíanos tus comentarios:</legend>
+						<div>
+							<label for="nombre">Nombre:</label>
+							<input type="text" id="nombre" class="fade" name="nombre_txt" required/>
+							<!--El atributo for del LABEL y el atributo id del INPUT deben ser coincidentes, el atributo REQUIRED, en html5 si damos al submit y este campos esta vacío mostrará un alert -->
+						</div>
+						<div>
+							<label for="email">Email:</label>
+							<input type="email" id="email" class="fade" name="email_txt" required/>
+							<!--El atributo for del LABEL y el atributo id del INPUT deben ser coincidentes, el atributo REQUIRED, en html5 si damos al submit y este campos esta vacío mostrará un alert -->
+						</div>
+						<div>
+							<label for="asunto">Asunto:</label>
+							<input type="text" id="asunto" class="fade" name="asunto_txt" required/>
+							<!--El atributo for del LABEL y el atributo id del INPUT deben ser coincidentes, el atributo REQUIRED, en html5 si damos al submit y este campos esta vacío mostrará un alert -->
+						</div>
+						<div>
+							<label for="comentarios">Comentarios:</label>
+							<textarea id="asunto" class="fade" name="comentarios_txa" cols="31" frows="5" required>
+							</textarea>
+							<!--El atributo for del LABEL y el atributo id del INPUT deben ser coincidentes, el atributo REQUIRED, en html5 si damos al submit y este campos esta vacío mostrará un alert -->
+						</div>
+						<div>
+							<input type="submit" id="enviar" class="fade" name="enviar_btn" value="Enviar"/>
+						</div>
+					</fieldset>
+				</form>
+			
+			</article>
+		</section>
+		<section id="mapa">
+			<iframe width="500" height="535" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.es/maps?f=q&amp;source=s_q&amp;hl=es&amp;geocode=&amp;q=Calle+de+Alcal%C3%A1,+Madrid&amp;aq=2&amp;oq=calle&amp;sll=40.525282,-3.81603&amp;sspn=2.267129,5.410767&amp;ie=UTF8&amp;hq=&amp;hnear=Calle+de+Alcal%C3%A1,+Madrid&amp;t=m&amp;z=13&amp;ll=40.433342,-3.647652&amp;output=embed"></iframe><br /><small><a href="https://maps.google.es/maps?f=q&amp;source=embed&amp;hl=es&amp;geocode=&amp;q=Calle+de+Alcal%C3%A1,+Madrid&amp;aq=2&amp;oq=calle&amp;sll=40.525282,-3.81603&amp;sspn=2.267129,5.410767&amp;ie=UTF8&amp;hq=&amp;hnear=Calle+de+Alcal%C3%A1,+Madrid&amp;t=m&amp;z=13&amp;ll=40.433342,-3.647652" style="color:#0000FF;text-align:left" target="_blank">Ver mapa más grande</a></small>
+		</section>
+	</section>
+
+	<footer>
+			Web realizada con HTML5, CSS3, Jquery y Responsive Web Design -.- Visita mi blog -.- <a rel="author" href="http://inquietomanuel.blogspot.com.es/" target="_blank">Inquieto Manuel</a>
+	</footer>
+</body>
+</html>
+
+

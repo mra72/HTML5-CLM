@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es"><!-- html con el atributo lang(ñenguaje), si no no es HTML5-->
+<head>
+	<meta charset="UFT-8"/>
+	 <title>Site con Responsive Web Design en HTML5, CSS3 y Jquery. Sección Trabajos.
+	 </title>
+	 
+	 <meta name="description" content="Bienvenido  al portafolio, realizado con HTML%, CSS y Jquery con
+	 Responsive Web Design;-)"/>
+	 <meta name="viewport" content="width=device-width, initial-sacale=1"/><!--Este meta name nos permite indicar que el tamaño del web se adapte al dispositivo donde se esté visualizando-->
+	 <link rel="shortcut icon" type="img/x-icon" href="favicon.ico"><!--Esta etiqueta LINK, Nos permitirá colocar un 'icono de página', es una pequeña imagen asociada con una página o sitio web en particular -->
+	 <link rel="author" type="text/plain" href="humans.txt"/>
+
+
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="js/jquery.flexslider.js"></script>
+
+	<!-- Hook up the FlexSlider -->
+	<script type="text/javascript">
+		$(window).load(function() {//Cuando el OBJ Window haya cargado ejecutar esta funcion!
+			$('.flexslider').flexslider();
+		});
+	</script>
+
+
+
+	 <link rel="stylesheet" type="text/css" href="css/flexslider.css">	
+	 <link rel="stylesheet" href="css/estilos.css"/>
+	 <!--[if lt IE 9]>
+	 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	 <![endIf]--><!--Esto permitará controlar que todas las etiquetas que no interpreten navegadores antiguos, generará DIv's que permitan interpretar estas nuevas etiqoetas HTML5 -->
+
+</head>
+
+<body>
+	<header>
+	<h1>
+		<a href="index.html">
+			<img class="fade" alt="lugar de webs" src="img/bextlan-logo.png"/>
+		</a>
+	</h1>
+	<nav>
+		 <ul>
+		 		<li><a href="index.html">Inicio</a></li>
+		 		<li><a href="acerca.html">Acerca</a></li>
+		 		<li><a href="servicios.html">Servicios</a></li>
+		 		<li><a href="trabajos.html">Trabajos</a></li>
+		 		<li><a href="contacto.html">Contacto</a></li>
+		 </ul>
+	</nav>
+	</header>
+
+
+	<section id="contenido">
+		<section id="principal">
+			<article id="galeria-inicio">
+				<div class="flexslider">
+					<ul class="slides">
+				    	<li>
+				    		<a href="http://bextlan.com"><img src="img/slide-0.png" /></a>
+				    		<p class="flex-caption">Lugar de Bits, Vectores y Pixeles</p>
+				    	</li>  
+				    	<li>
+				    		<img src="img/slide-1.png" />
+				    		<p class="flex-caption">slide 1</p>
+				    	</li>   
+				    	<li>
+				    		<img src="img/slide-2.png" />
+				    		<p class="flex-caption">Slide 2</p>
+				    	</li> 
+				    	<li>
+				    		<a href="http://bextlan.com"><img src="img/slide-3.png" /></a>
+				    		<p class="flex-caption">Slide 3</p>
+				    	</li>     	
+					</ul>
+				</div>
+			</article>
+		</section>
+		<aside>
+			Widgets Sociales
+		</aside>
+	</section>
+
+	<footer>
+			Aprediendo HTML5, CSS3, jquery y Responsive Web Design con <a rel="author" href="http://twitter.com/bextlan" target="_blank">@besxtlan</a>
+	</footer>
+</body>
+</html>

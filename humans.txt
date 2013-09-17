@@ -1,0 +1,19 @@
+/*title de mi pagina http://*/
+/*TEAM*/
+	/*Detallar las personas que han intervenido en el site:
+	creator:
+	contact:
+	twitter:
+	from:
+	*/
+
+/*
+ SITE:
+
+ last update:
+ languaje:
+ standars: HTML5, CSS3, Javascript
+ components: Jquery
+ Software:
+*/
+

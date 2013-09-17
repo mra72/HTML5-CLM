@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es"><!-- html con el atributo lang(lenguaje), si no no es HTML5-->
+<head>
+	<meta charset="UTF-8"/>
+	 <title>Site con Responsive Web Design realizado con HTML5, CCS y Jquery
+	 </title>
+	 
+	 <meta name="description" content="Bienvenido esta site donde podrás conocer un poquito mas a fondo Castilla La Mancha"/>
+	 <meta name="viewport" content="width=device-width, initial-sacale=1"/><!--Este meta name nos permite indicar que el tamaño del web se adapte al dispositivo donde se esté visualizando-->
+	<!--Esta etiqueta LINK, Nos permitirá colocar un 'icono de página', es una pequeña imagen asociada con una página o sitio web en particular -->
+	 <link rel="shortcut icon" href="http://www.castillalamancha.es/sites/default/files/favicon.ico" />
+
+	 <link rel="author" type="text/plain" href="humans.txt"/>
+
+
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script><!--Esta ruta hara que no haga falta que especifiquemos la version mas actual de Jquery, ya que la obtendrá automáticamente -->
+	 <script>
+		!window.jQuery && document.write('<script src="js/jquery.min.js"><\/script>');
+	 </script>
+	<script src="js/jquery.flexslider.js"></script>
+
+	<!-- Hook up the FlexSlider -->
+	<script type="text/javascript">
+		$(window).load(function() {//Cuando el OBJ Window haya cargado ejecutar esta funcion!
+			$('.flexslider').flexslider();
+		});
+	</script>
+
+
+	<link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml"/>
+	 <link rel="stylesheet" type="text/css" href="css/flexslider.css">	
+	 <link rel="stylesheet" href="css/estilos.css"/>
+	 <!--IMPORTANTE-->
+	 <!--[if lt IE 9]>
+	 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	 <![endIf]--><!--Esto permitará controlar que todas las etiquetas que no interpreten navegadores antiguos, generará DIv's que permitan interpretar estas nuevas etiquetas HTML5 -->
+
+</head>
+
+<body>
+	<header>
+	<h1>
+		<a href="index.html">
+			<img class="fade" alt="Castilla La Mancha" src="img/clm.jpg"/>
+		</a>
+	</h1>
+	<nav>
+		 <ul>
+		 		<li><a href="index.html">Inicio</a></li>
+		 		<li><a href="afondo.html">A fondo</a></li>
+		 		<li><a href="contacto.html">Contacto</a></li>
+		 </ul>
+	</nav>
+	</header>
+
+
+	<section id="contenido">
+		<section id="principal">
+			<article id="galeria-inicio">
+				<div class="flexslider">
+					<ul class="slides">
+				    	<li>
+				    		<a href="afondo.html"><img src="img/clmancha.png" /></a>
+				    		<p class="flex-caption">Castilla La Mancha...¡¡Ven y descúbrela!!</p>
+				    	</li>  
+				    	<li>
+				    		<a href="albaceteTemplate.html"><img src="img/albacete.jpg" /></a>
+				    		<p class="flex-caption">Albacete</p>
+				    	</li>   
+				    	<li>
+				    		<a href="ciudadRealTemplate.html"><img src="img/ciudad-real2.jpg" /></a>
+				    		<p class="flex-caption">Ciudad Real</p>
+				    	</li> 
+				    	<li>
+				    		<a href="cuencaTemplate.html"><img src="img/cuenca.jpg" /></a>
+				    		<p class="flex-caption">Cuenca</p>
+				    	</li>   
+				    	<li>
+				    		<a href="guadalajaraTemplate.html"><img src="img/guadalajara.jpg" /></a>
+				    		<p class="flex-caption">Guadalajara</p>
+				    	</li>   
+				    	<li>
+				    		<a href="toledoTemplate.html"><img src="img/toledo.jpg" /></a>
+				    		<p class="flex-caption">Toledo</p>
+				    	</li>  	
+					</ul>
+				</div>
+			</article>
+		</section>
+		<aside>
+			<!--Widgets Sociales, para  insertar los botones de redes sociales e interactuar en ellas-->
+			<!--Twitter-->
+			<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+			<!--Este código lo generamos desde la propia web de twitter, en la sección 'Recursos'--'Botones'-->
+			<a href="https://twitter.com/intent/tweet?screen_name=nute75" class="twitter-share-button" data-lang="es" data-related="nute75">Tweet to @nute75</a></br>
+
+
+			<!--El globito CONTADOR muestra las visitas de la URL especificada en "data-url" -->
+
+			<a href="https://twitter.com/nute75" class="twitter-follow-button" data-show-count="false" data-lang="es">Seguir a @nute75</a>
+			</br>
+			<!--Facebook--vamos a incluir el boton me gusta de la pag facebook de mi pagina X-->
+			<!--Para incrustar el face usaremos un DIV, aq deberiamos de ir dejando de usarlas, y hacerlo con las section, article etc etc del HTML5 -->
+			<!-- Facebook -->
+		<div id="fb-root"></div>
+		<script src="http://connect.facebook.net/es_LA/all.js"></script>
+		<fb:like href="http://www.facebook.com/bextlan" send="false" layout="box_count" show-faces="false" font="tahoma"></fb:like>
+
+
+		</aside>
+	</section>
+
+	<footer>
+			Web realizada con HTML5, CSS3, Jquery y Responsive Web Design -.- Visita mi blog -.- <a rel="author" href="http://inquietomanuel.blogspot.com.es/" target="_blank">Inquieto Manuel</a>
+	</footer>
+</body>
+</html>
