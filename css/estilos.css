@@ -445,9 +445,9 @@ footer nav{
 }
 
 @media screen and (max-width: 1080px){/*cuando el tam de la ventana del navegador como minimo sea 1080px aplicaran estos estilos*/
-	body{
+	/*body{
 		background: #06EC2C;
-	}
+	}*/
 
 	nav li{
 		font-size: 1.3em;
@@ -480,9 +480,9 @@ footer nav{
 }
 
 @media screen and (max-width: 800px){/*cuando el tam de la ventana del navegador como minimo sea 800px aplicaran estos estilos*/
-	body{
+	/*body{
 		background: #E8EC06;
-	}
+	}*/
 
 	nav li{
 		font-size: 0.95em;
@@ -510,9 +510,9 @@ footer nav{
 }
 
 @media(max-width: 600px){/*cuando el tam de la ventana del navegador como max  600px o menor aplicaran estos estilos*/
-	body{
+	/*body{
 		background: #EC2106;
-	}
+	}*/
 
 	nav li{
 		display: inline-block;
