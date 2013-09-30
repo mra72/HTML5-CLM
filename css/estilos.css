@@ -493,7 +493,7 @@ footer nav{
 
 	section#contacto, section#mapa{
 		display: block;
-		width: 95%;
+		width: 90%;/*95%*/
 	}
 
 	section#contacto{
