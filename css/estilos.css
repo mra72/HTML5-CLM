@@ -135,7 +135,7 @@ form div{
 h1,h2,h3{
 	color: #FFF;/*#F90;*/
 	font-family: "Pecita", Helvetica, Verdana;
-	vertical-align: right;
+
 }
 
 h3{
@@ -421,7 +421,7 @@ footer nav{
 	-webkit-transition:all 0.5s ease-out;/*para safari y chrome*/
 	opacity: 0.7;/* va de 0 a 1*/
 	filter: alpha(opacity=7);/*aqui el rango es de 0 a 10*/t
-	ransition:all 0.5s ease-out;
+	transition:all 0.5s ease-out;
 	
 }
 
